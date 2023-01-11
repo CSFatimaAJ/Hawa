@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB3C59EA296EB2EF00165864 /* logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3C59E9296EB2EF00165864 /* logo.swift */; };
 		CBEF6A22296AA72500927B83 /* HawaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEF6A21296AA72500927B83 /* HawaApp.swift */; };
 		CBEF6A24296AA72500927B83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEF6A23296AA72500927B83 /* ContentView.swift */; };
 		CBEF6A26296AA72700927B83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBEF6A25296AA72700927B83 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB3C59E9296EB2EF00165864 /* logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logo.swift; sourceTree = "<group>"; };
 		CBEF6A1E296AA72500927B83 /* Hawa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hawa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBEF6A21296AA72500927B83 /* HawaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawaApp.swift; sourceTree = "<group>"; };
 		CBEF6A23296AA72500927B83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				CBEF6A2F296C155400927B83 /* HSN Sara.ttf */,
 				CBEF6A21296AA72500927B83 /* HawaApp.swift */,
 				CBEF6A23296AA72500927B83 /* ContentView.swift */,
+				CB3C59E9296EB2EF00165864 /* logo.swift */,
 				CBEF6A34296DEB3F00927B83 /* LaunchView.swift */,
 				CBEF6A38296DEE1000927B83 /* info.swift */,
 				CBEF6A36296DEDD500927B83 /* Notifications.swift */,
@@ -165,6 +168,7 @@
 				CBEF6A24296AA72500927B83 /* ContentView.swift in Sources */,
 				CBEF6A35296DEB3F00927B83 /* LaunchView.swift in Sources */,
 				CBEF6A39296DEE1000927B83 /* info.swift in Sources */,
+				CB3C59EA296EB2EF00165864 /* logo.swift in Sources */,
 				CBEF6A33296C972800927B83 /* breathTimer.swift in Sources */,
 				CBEF6A22296AA72500927B83 /* HawaApp.swift in Sources */,
 			);
@@ -304,6 +308,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hawa/Preview Content\"";
@@ -335,6 +340,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hawa/Preview Content\"";

@@ -38,11 +38,14 @@ struct ContentView: View {
         let minutes = String(format: "%01d", stopWatch.counter / 60)
         let seconds = String(format: "%02d", stopWatch.counter % 60)
         var time = minutes + " : " + seconds
+        NavigationView {
             ZStack{
                 screenFrame
                     .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 
+                                   
                 VStack {
+                    
                     Text(self.stopWatch.firstString).font(Font.custom("HSN Sara", size: 50))
                         .foregroundColor(Color("whitecolor"))
                         .offset(y: -300)
@@ -51,8 +54,17 @@ struct ContentView: View {
                         .animation(Animation.easeInOut(duration: 1))
                         .accessibilityLabel(self.stopWatch.firstString)
                 }
-  
-  
+                
+                .navigationBarItems(
+                    
+                    trailing:
+                        NavigationLink(destination: info()) {
+                            Image("info")
+                                .resizable().frame(width: 45,height: 45)
+                            
+                        })
+                
+                
                 ZStack{
                     Image("logo").resizable().frame(width: 320,height: 300)
                     
@@ -103,10 +115,10 @@ struct ContentView: View {
                             }
                         
                     }//.position(x:215,y:340)
-                    .position(x: screenWidth/1.999,y: screenHeight/2.75)
+                    .position(x: screenWidth/1.999,y: screenHeight/2.89)
                     .shadow(radius: showShadow ? 20 : 0)
                     .hueRotation(Angle(degrees: showShadow ? 0 : 335))
-                    
+                    .accessibilityHidden(true)
                     .animation(Animation.easeInOut(duration: 2).delay(0.5),value: self.showShadow)
                     .onReceive(self.stopWatch.$state) { state in
                         withAnimation(state ? .easeInOut(duration: 2).delay(0.5): nil)
@@ -166,8 +178,8 @@ struct ContentView: View {
                         
                         
                     }//.position(x:215,y:340)
-                    .position(x: screenWidth/1.999,y: screenHeight/2.75)
-                    
+                    .position(x: screenWidth/1.999,y: screenHeight/2.89)
+                    .accessibilityHidden(true)
                     .shadow(radius: showShadow ? 20 : 0)
                     .hueRotation(Angle(degrees: showShadow ? 0 : 335))
                     .animation(Animation.easeInOut(duration: 2).delay(0.5),value: self.showShadow)
@@ -223,7 +235,7 @@ struct ContentView: View {
                                     .foregroundColor(Color("whitecolor"))
                                 
                             ).onTapGesture {
-                                self.count = count + 5
+                                self.count = count + 20
                                 self.stopWatch.counter = count
                                 
                             }
@@ -242,13 +254,13 @@ struct ContentView: View {
                         }
                         
                     }.accessibilityLabel("\(buttonState)")
-                    .font(Font.custom("HSN Sara", size: 24)).foregroundColor(Color("redColor")).background(
-                        Rectangle()
-                            .frame(width: 214, height: 50, alignment: .center)
-                            .foregroundColor(Color("whitecolor"))
-                            .cornerRadius(8)
-                        
-                    ).offset(y: 320).padding(.bottom, 100.0)
+                        .font(Font.custom("HSN Sara", size: 24)).foregroundColor(Color("redColor")).background(
+                            Rectangle()
+                                .frame(width: 214, height: 50, alignment: .center)
+                                .foregroundColor(Color("whitecolor"))
+                                .cornerRadius(8)
+                            
+                        ).offset(y: 320).padding(.bottom, 100.0)
                         .onReceive(self.stopWatch.$counter) { count in
                             if count == 0 {
                                 self.buttonState = "Start"
@@ -258,7 +270,7 @@ struct ContentView: View {
                 }
             }
             
-        
+        }
         
     }
 }
