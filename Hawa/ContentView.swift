@@ -23,16 +23,16 @@ struct ContentView: View {
     @State private var showLeftStroke = false
     //@State var currentIndex : Int = 0
     // @State var firstString : String = ""
-    @State var buttonState : String = "Start"
+    @State var buttonState : LocalizedStringKey = "Start"
     @State var timer: Timer? = nil
     //    @State var isBlurred = false
     @State var count : Int = 0
     
     let screenWidth = UIScreen.main.bounds.width
-        let screenHeight = UIScreen.main.bounds.height
+    let screenHeight = UIScreen.main.bounds.height
     var array = ["امسك","زفير","امسك","شهيق"]
     let screenFrame = Color(#colorLiteral(red: 0.2156862745, green: 0.2039215686, blue: 0.3098039216, alpha: 1))
-
+    
     
     var body: some View {
         let minutes = String(format: "%01d", stopWatch.counter / 60)
@@ -43,7 +43,7 @@ struct ContentView: View {
                 screenFrame
                     .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 
-                                   
+                
                 VStack {
                     
                     Text(self.stopWatch.firstString).font(Font.custom("HSN Sara", size: 50))
@@ -242,41 +242,42 @@ struct ContentView: View {
                     }
                     .offset(y: 300)
                     
-                    Button("\(buttonState)") {
-                        if buttonState == "Stop"{
-                            time = "\(self.stopWatch.counter)"
-                            //   self.stopWatch.counter
-                            self.stopWatch.stop()
-                            self.buttonState = "Start"
-                        }else{
-                            self.stopWatch.start()
-                            self.buttonState = "Stop"
-                        }
-                        
-                    }.accessibilityLabel("\(buttonState)")
-                        .font(Font.custom("HSN Sara", size: 24)).foregroundColor(Color("redColor")).background(
-                            Rectangle()
-                                .frame(width: 214, height: 50, alignment: .center)
-                                .foregroundColor(Color("whitecolor"))
-                                .cornerRadius(8)
+                    Button(buttonState) {
+                                if buttonState == "\(NSLocalizedString("STOP", comment: ""))"{
+                                    time = "\(self.stopWatch.counter)"
+                                    //   self.stopWatch.counter
+                                    self.stopWatch.stop()
+                                    self.buttonState = "\(NSLocalizedString("START", comment: ""))"
+                                }else{
+                                    self.stopWatch.start()
+                                    self.buttonState = "\(NSLocalizedString("STOP", comment: ""))"
+                                }
+                                
+                            }.accessibilityLabel(buttonState)
                             
-                        ).offset(y: 320).padding(.bottom, 100.0)
-                        .onReceive(self.stopWatch.$counter) { count in
-                            if count == 0 {
-                                self.buttonState = "Start"
-                            }
+                                .font(Font.custom("HSN Sara", size: 24)).foregroundColor(Color("redColor")).background(
+                                    Rectangle()
+                                        .frame(width: 214, height: 50, alignment: .center)
+                                        .foregroundColor(Color("whitecolor"))
+                                        .cornerRadius(8)
+                                    
+                                ).offset(y: 320).padding(.bottom, 100.0)
+                                .onReceive(self.stopWatch.$counter) { count in
+                                    if count == 0 {
+                                        self.buttonState = "\(NSLocalizedString("START", comment: ""))"
+                                    }
+                                }
+                            
                         }
+                    }
                     
                 }
+                
             }
-            
         }
         
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+        struct ContentView_Previews: PreviewProvider {
+            static var previews: some View {
+                ContentView()
+            }
+        }
