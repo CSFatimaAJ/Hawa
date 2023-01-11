@@ -11,6 +11,12 @@
 		CBEF6A24296AA72500927B83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEF6A23296AA72500927B83 /* ContentView.swift */; };
 		CBEF6A26296AA72700927B83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBEF6A25296AA72700927B83 /* Assets.xcassets */; };
 		CBEF6A29296AA72700927B83 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBEF6A28296AA72700927B83 /* Preview Assets.xcassets */; };
+		CBEF6A30296C155400927B83 /* HSN Sara.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CBEF6A2F296C155400927B83 /* HSN Sara.ttf */; };
+		CBEF6A33296C972800927B83 /* breathTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEF6A32296C972800927B83 /* breathTimer.swift */; };
+		CBEF6A35296DEB3F00927B83 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEF6A34296DEB3F00927B83 /* LaunchView.swift */; };
+		CBEF6A37296DEDD500927B83 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEF6A36296DEDD500927B83 /* Notifications.swift */; };
+		CBEF6A39296DEE1000927B83 /* info.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEF6A38296DEE1000927B83 /* info.swift */; };
+		CBEF6A3C296DF1EC00927B83 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBEF6A3E296DF1EC00927B83 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,14 @@
 		CBEF6A23296AA72500927B83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CBEF6A25296AA72700927B83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBEF6A28296AA72700927B83 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CBEF6A2F296C155400927B83 /* HSN Sara.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HSN Sara.ttf"; sourceTree = "<group>"; };
+		CBEF6A31296C156600927B83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CBEF6A32296C972800927B83 /* breathTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = breathTimer.swift; sourceTree = "<group>"; };
+		CBEF6A34296DEB3F00927B83 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		CBEF6A36296DEDD500927B83 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		CBEF6A38296DEE1000927B83 /* info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = info.swift; sourceTree = "<group>"; };
+		CBEF6A3D296DF1EC00927B83 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CBEF6A3F296DF1F000927B83 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +65,17 @@
 		CBEF6A20296AA72500927B83 /* Hawa */ = {
 			isa = PBXGroup;
 			children = (
+				CBEF6A31296C156600927B83 /* Info.plist */,
+				CBEF6A2F296C155400927B83 /* HSN Sara.ttf */,
 				CBEF6A21296AA72500927B83 /* HawaApp.swift */,
 				CBEF6A23296AA72500927B83 /* ContentView.swift */,
+				CBEF6A34296DEB3F00927B83 /* LaunchView.swift */,
+				CBEF6A38296DEE1000927B83 /* info.swift */,
+				CBEF6A36296DEDD500927B83 /* Notifications.swift */,
+				CBEF6A32296C972800927B83 /* breathTimer.swift */,
 				CBEF6A25296AA72700927B83 /* Assets.xcassets */,
 				CBEF6A27296AA72700927B83 /* Preview Content */,
+				CBEF6A3E296DF1EC00927B83 /* Localizable.strings */,
 			);
 			path = Hawa;
 			sourceTree = "<group>";
@@ -109,6 +130,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = CBEF6A15296AA72500927B83;
 			productRefGroup = CBEF6A1F296AA72500927B83 /* Products */;
@@ -126,6 +148,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBEF6A29296AA72700927B83 /* Preview Assets.xcassets in Resources */,
+				CBEF6A3C296DF1EC00927B83 /* Localizable.strings in Resources */,
+				CBEF6A30296C155400927B83 /* HSN Sara.ttf in Resources */,
 				CBEF6A26296AA72700927B83 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,12 +161,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBEF6A37296DEDD500927B83 /* Notifications.swift in Sources */,
 				CBEF6A24296AA72500927B83 /* ContentView.swift in Sources */,
+				CBEF6A35296DEB3F00927B83 /* LaunchView.swift in Sources */,
+				CBEF6A39296DEE1000927B83 /* info.swift in Sources */,
+				CBEF6A33296C972800927B83 /* breathTimer.swift in Sources */,
 				CBEF6A22296AA72500927B83 /* HawaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CBEF6A3E296DF1EC00927B83 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBEF6A3D296DF1EC00927B83 /* en */,
+				CBEF6A3F296DF1F000927B83 /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CBEF6A2A296AA72700927B83 /* Debug */ = {
@@ -195,7 +235,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +289,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -267,13 +307,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hawa/Preview Content\"";
+				DEVELOPMENT_TEAM = 8CJQHF82R3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Hawa/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,13 +338,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hawa/Preview Content\"";
+				DEVELOPMENT_TEAM = 8CJQHF82R3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Hawa/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,0 +1,25 @@
+/*
+  Localizable.strings
+  LOC
+
+  Created by ARWA ALSALEM on 15/06/1444 AH.
+  
+*/
+"Inhale" = "Inhale";
+"Hold" = "Hold";
+"Exhale" = "Exhale";
+"START" = "START";
+"STOP" = "STOP";
+"Hawa" = "Hawa";
+
+"What are the benefits of deep breathing?" = " What are the benefits of deep breathing?";
+"Reduce stress" = "Reduce stress";
+"Pain relief" ="Pain relief";
+"Reducing the level of toxins in the body" = "Reducing the level of toxins in the body";
+" Improve immunity" = " Improve immunity";
+"Increasing the energy level" = "Increasing the energy level";
+" Lowering blood pressur" = "Lowering blood pressure";
+
+
+"Do not forget" = "Do not forget";
+"take a breath" = "take a breath" ;

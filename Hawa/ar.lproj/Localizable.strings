@@ -1,0 +1,24 @@
+/*
+  Localizable.strings
+  LOC
+
+  Created by ARWA ALSALEM on 15/06/1444 AH.
+  
+*/
+"Inhale" = "شهيق";
+"Hold" = "امسك";
+"Exhale" = "زفير";
+"START" = "إبدأ";
+"STOP" = "توقف";
+"Hawa" = "هواء";
+
+"What are the benefits of deep breathing?" = " ما هي فوائد التنفس العميق؟";
+"Reduce stress" = " التقليل من التوتر  ";
+"Pain relief" =" التخفيف من الألم";
+"Reducing the level of toxins in the body" = "التقليل من مستوى السموم في الجسم";
+" Improve immunity" = "تحسين المناعة ";
+;"زيادة مستوى الطاقة"= "Increasing the energy level"
+ ;" خفض ضغط الدم" = "Lowering blood pressure"
+
+"Do not forget" = "لاتنسى" ;
+"take a breath" = "تأخذ نفس!"
