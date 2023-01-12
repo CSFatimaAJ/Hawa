@@ -2,7 +2,7 @@
 <img src="https://user-images.githubusercontent.com/116789430/212021661-5b5a96a9-c75c-4996-8988-2d78f6ebdce1.png" width="100" />
 
 
-### An app that helps People who wants to be reminded to take a deep breath during their daily lives.
+## An app that helps People who wants to be reminded to take a deep breath during their daily lives.
 
 ## Challenge Statement
 ###### People want to have healthy body and improve their healthy life
