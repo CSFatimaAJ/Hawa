@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  Hawa
+
+  Created by Fatima Aljaber on 11/01/2023.
+  
+*/
+
+"CFBundleDisplayName" = "هواء";
+
+"CFBundleName" = "هواء";

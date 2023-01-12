@@ -8,7 +8,7 @@
 import Foundation
 import Accessibility
 import UIKit
-
+import SwiftUI
 class breathTimer: ObservableObject {
     
     @Published var counter: Int = 0
@@ -21,8 +21,9 @@ class breathTimer: ObservableObject {
     var currentIndex : Int = 0
     @Published var firstString : LocalizedStringKey = "Hawa"
 
-    var array = ["BreathIn","Hold","BreathOut","Hold"]
-
+    var array = [NSLocalizedString("Inhale", comment: ""),
+    NSLocalizedString("Hold", comment: ""),
+    NSLocalizedString("Exhale", comment: "")]
     func start() {
         self.firstString = "\(self.array[0])"
 

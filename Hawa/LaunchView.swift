@@ -128,7 +128,7 @@ struct LaunchView: View {
                                   }
   
                                   .rotationEffect(.degrees(-90))
-                                  Text("Hawa").font(Font.system(size: 80)).foregroundColor(.white)
+                                  Text("Hawa").font(Font.custom("HSN Sara", size: 80)).foregroundColor(.white)
 
                               }.offset(y: -50)
 
