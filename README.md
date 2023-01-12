@@ -1,6 +1,6 @@
 # Hawa app
+![appstore](https://user-images.githubusercontent.com/116789430/212016666-9f4b7685-b3ea-44c2-ae35-d26ba63b4b87.png){:height="50%" width="50%"}
 
-<img src= "![appstore](https://user-images.githubusercontent.com/116789430/212016666-9f4b7685-b3ea-44c2-ae35-d26ba63b4b87.png)" width="48">
 
 ### An app that helps People who wants to be reminded to take a deep breath during their daily lives.
 
