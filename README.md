@@ -13,6 +13,11 @@
 ## Technologies & Tools
 ###### xCode, swiftUI
 
+## Sketch design
+<img src="https://user-images.githubusercontent.com/116789430/212025358-c113fc25-00f5-4f45-8f0c-7893a8b89999.png" width="100" />
+
+
+
 ## Demo of your App (1 - 2 minute long)
 
 ## Challenge Summary
