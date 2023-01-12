@@ -24,3 +24,4 @@ https://user-images.githubusercontent.com/116789430/212028326-0f408fa6-8e00-4021
 
 
 ## Challenge Summary
+###### This app was built by Fatima Aljaber & Arwa Alsalem during mini challnege(10 days) in Apple academy.
