@@ -11,14 +11,14 @@
 "START" = "إبدأ";
 "STOP" = "توقف";
 "Hawa" = "هواء";
-
+"Breath Benefit" = "أهمية التنفس";
 "What are the benefits of deep breathing?" = " ما هي فوائد التنفس العميق؟";
-"Reduce stress" = " التقليل من التوتر  ";
+"Reduce stress" = " التقليل من التوتر ";
 "Pain relief" =" التخفيف من الألم";
 "Reducing the level of toxins in the body" = "التقليل من مستوى السموم في الجسم";
-" Improve immunity" = "تحسين المناعة ";
-;"زيادة مستوى الطاقة"= "Increasing the energy level"
- ;" خفض ضغط الدم" = "Lowering blood pressure"
+" Enhance Immunity" = "تحسين المناعة ";
+"Lowering blood pressur" = "خفض ضغط الدم";
+"Increasing the energy level" = "زيادة مستوى الطاقة";
 
-"Do not forget" = "لاتنسى" ;
-"take a breath" = "تأخذ نفس!"
+"Do not forget" = "لاتنسى";
+"take a breath" = "تأخذ نفس!";

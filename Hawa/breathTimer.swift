@@ -8,7 +8,7 @@
 import Foundation
 import Accessibility
 import UIKit
-
+import SwiftUI
 class breathTimer: ObservableObject {
     
     @Published var counter: Int = 0
@@ -19,12 +19,13 @@ class breathTimer: ObservableObject {
     var newTimer2 = Timer()
     var isBlurred = false
     var currentIndex : Int = 0
-    @Published var firstString : String = "Hawa"
-    
-    var array = ["BreathIn","Hold","BreathOut","Hold"]
+    @Published var firstString : LocalizedStringKey = "Hawa"
 
+    var array = [NSLocalizedString("Inhale", comment: ""),
+    NSLocalizedString("Hold", comment: ""),
+    NSLocalizedString("Exhale", comment: "")]
     func start() {
-        self.firstString = self.array[0]
+        self.firstString = "\(self.array[0])"
 
         self.newTimer = Timer.scheduledTimer(withTimeInterval: 1.0,
                                              repeats: true) { v in
@@ -55,8 +56,8 @@ class breathTimer: ObservableObject {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
                         self.isBlurred.toggle()
                         self.announce(state: self.array[self.currentIndex])
-                        self.firstString = self.array[self.currentIndex]
-                        
+                        self.firstString = "\(self.array[self.currentIndex])"
+
                     }
                 }
             }

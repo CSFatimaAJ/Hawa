@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB3C59EA296EB2EF00165864 /* logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3C59E9296EB2EF00165864 /* logo.swift */; };
-		CB3C59ED296F005700165864 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB3C59EF296F005700165864 /* InfoPlist.strings */; };
 		CBEF6A22296AA72500927B83 /* HawaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEF6A21296AA72500927B83 /* HawaApp.swift */; };
 		CBEF6A24296AA72500927B83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEF6A23296AA72500927B83 /* ContentView.swift */; };
 		CBEF6A26296AA72700927B83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBEF6A25296AA72700927B83 /* Assets.xcassets */; };
@@ -22,9 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CB3C59E9296EB2EF00165864 /* logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logo.swift; sourceTree = "<group>"; };
-		CB3C59EE296F005700165864 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CB3C59F0296F005B00165864 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CBEF6A1E296AA72500927B83 /* Hawa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hawa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBEF6A21296AA72500927B83 /* HawaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HawaApp.swift; sourceTree = "<group>"; };
 		CBEF6A23296AA72500927B83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,14 +68,12 @@
 				CBEF6A31296C156600927B83 /* Info.plist */,
 				CBEF6A2F296C155400927B83 /* HSN Sara.ttf */,
 				CBEF6A21296AA72500927B83 /* HawaApp.swift */,
-				CBEF6A23296AA72500927B83 /* ContentView.swift */,
-				CB3C59E9296EB2EF00165864 /* logo.swift */,
 				CBEF6A34296DEB3F00927B83 /* LaunchView.swift */,
+				CBEF6A23296AA72500927B83 /* ContentView.swift */,
 				CBEF6A38296DEE1000927B83 /* info.swift */,
 				CBEF6A36296DEDD500927B83 /* Notifications.swift */,
 				CBEF6A32296C972800927B83 /* breathTimer.swift */,
 				CBEF6A25296AA72700927B83 /* Assets.xcassets */,
-				CB3C59EF296F005700165864 /* InfoPlist.strings */,
 				CBEF6A27296AA72700927B83 /* Preview Content */,
 				CBEF6A3E296DF1EC00927B83 /* Localizable.strings */,
 			);
@@ -158,7 +151,6 @@
 				CBEF6A3C296DF1EC00927B83 /* Localizable.strings in Resources */,
 				CBEF6A30296C155400927B83 /* HSN Sara.ttf in Resources */,
 				CBEF6A26296AA72700927B83 /* Assets.xcassets in Resources */,
-				CB3C59ED296F005700165864 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,7 +165,6 @@
 				CBEF6A24296AA72500927B83 /* ContentView.swift in Sources */,
 				CBEF6A35296DEB3F00927B83 /* LaunchView.swift in Sources */,
 				CBEF6A39296DEE1000927B83 /* info.swift in Sources */,
-				CB3C59EA296EB2EF00165864 /* logo.swift in Sources */,
 				CBEF6A33296C972800927B83 /* breathTimer.swift in Sources */,
 				CBEF6A22296AA72500927B83 /* HawaApp.swift in Sources */,
 			);
@@ -182,15 +173,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CB3C59EF296F005700165864 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB3C59EE296F005700165864 /* en */,
-				CB3C59F0296F005B00165864 /* ar */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		CBEF6A3E296DF1EC00927B83 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -322,7 +304,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hawa/Preview Content\"";
@@ -354,7 +335,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Hawa/Preview Content\"";

@@ -23,16 +23,16 @@ struct ContentView: View {
     @State private var showLeftStroke = false
     //@State var currentIndex : Int = 0
     // @State var firstString : String = ""
-    @State var buttonState : String = "Start"
+    @State var buttonState : LocalizedStringKey = "Start"
     @State var timer: Timer? = nil
     //    @State var isBlurred = false
     @State var count : Int = 0
     
     let screenWidth = UIScreen.main.bounds.width
-        let screenHeight = UIScreen.main.bounds.height
+    let screenHeight = UIScreen.main.bounds.height
     var array = ["امسك","زفير","امسك","شهيق"]
     let screenFrame = Color(#colorLiteral(red: 0.2156862745, green: 0.2039215686, blue: 0.3098039216, alpha: 1))
-
+    
     
     var body: some View {
         let minutes = String(format: "%01d", stopWatch.counter / 60)
@@ -43,7 +43,7 @@ struct ContentView: View {
                 screenFrame
                     .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 
-                                   
+                
                 VStack {
                     
                     Text(self.stopWatch.firstString).font(Font.custom("HSN Sara", size: 50))
@@ -67,135 +67,135 @@ struct ContentView: View {
                 
                 ZStack{
                     Image("logo").resizable().frame(width: 320,height: 300)
-                    
-                    ZStack{
-                        Image("flower")
-                            .rotationEffect(.degrees(0), anchor: .bottom)
-                        
-                        Image("flower")  // Middle left
-                        Image("flower")  // Left
-                            .rotationEffect(.degrees( mlBreath ? -5 : -25), anchor: .bottom)
-                            .onReceive(self.stopWatch.$state) { state in
-                                withAnimation(state ? .easeInOut(duration: 2).delay(2).repeatForever() : nil)
-                                {
-                                    mlBreath = state
+                    HStack(alignment:.center, spacing: 90){
+                        ZStack{
+                            Image("flower")
+                                .rotationEffect(.degrees(0), anchor: .bottom)
+                            
+                            Image("flower")  // Middle left
+                            Image("flower")  // Left
+                                .rotationEffect(.degrees( mlBreath ? -5 : -25), anchor: .bottom)
+                                .onReceive(self.stopWatch.$state) { state in
+                                    withAnimation(state ? .easeInOut(duration: 2).delay(2).repeatForever() : nil)
+                                    {
+                                        mlBreath = state
+                                    }
+                                    
                                 }
-                                
-                            }
-                        Image("flower")  // Middle right
-                        Image("flower")  // Right
-                            .rotationEffect(.degrees( mrBreath ? 5 : 25), anchor: .bottom)
-                            .onReceive(self.stopWatch.$state) { state in
-                                withAnimation(state ? .easeInOut(duration: 2).delay(2).repeatForever(): nil)
-                                {
-                                    mrBreath = state
+                            Image("flower")  // Middle right
+                            Image("flower")  // Right
+                                .rotationEffect(.degrees( mrBreath ? 5 : 25), anchor: .bottom)
+                                .onReceive(self.stopWatch.$state) { state in
+                                    withAnimation(state ? .easeInOut(duration: 2).delay(2).repeatForever(): nil)
+                                    {
+                                        mrBreath = state
+                                    }
+                                    
                                 }
-                                
-                            }
-                        
-                        Image("flower") // Left
-                            .rotationEffect(.degrees( lBreath ? -10 : -50), anchor: .bottom)
-                            .onReceive(self.stopWatch.$state) { state in
-                                withAnimation(state ? .easeInOut(duration: 2).delay(2).repeatForever() : nil)
-                                {
-                                    lBreath = state
+                            
+                            Image("flower") // Left
+                                .rotationEffect(.degrees( lBreath ? -10 : -50), anchor: .bottom)
+                                .onReceive(self.stopWatch.$state) { state in
+                                    withAnimation(state ? .easeInOut(duration: 2).delay(2).repeatForever() : nil)
+                                    {
+                                        lBreath = state
+                                    }
+                                    
                                 }
-                                
-                            }
-                        
-                        
-                        Image("flower") // Right
-                            .rotationEffect(.degrees( rBreath ? 10 : 50), anchor: .bottom)
-                            .onReceive(self.stopWatch.$state) { state in
-                                withAnimation(state ? .easeInOut(duration: 2).delay(2).repeatForever() : nil)
-                                {
-                                    rBreath = state
+                            
+                            
+                            Image("flower") // Right
+                                .rotationEffect(.degrees( rBreath ? 10 : 50), anchor: .bottom)
+                                .onReceive(self.stopWatch.$state) { state in
+                                    withAnimation(state ? .easeInOut(duration: 2).delay(2).repeatForever() : nil)
+                                    {
+                                        rBreath = state
+                                    }
+                                    
                                 }
-                                
+                            
+                        }//.position(x:215,y:340)
+                     //   .position(x: screenWidth/1.999,y: screenHeight/2.89)
+                        .shadow(radius: showShadow ? 20 : 0)
+                        .hueRotation(Angle(degrees: showShadow ? 0 : 335))
+                        .accessibilityHidden(true)
+                        .animation(Animation.easeInOut(duration: 2).delay(0.5),value: self.showShadow)
+                        .onReceive(self.stopWatch.$state) { state in
+                            withAnimation(state ? .easeInOut(duration: 2).delay(0.5): nil)
+                            {
+                                showShadow = state
                             }
-                        
-                    }//.position(x:215,y:340)
-                    .position(x: screenWidth/1.999,y: screenHeight/2.89)
-                    .shadow(radius: showShadow ? 20 : 0)
-                    .hueRotation(Angle(degrees: showShadow ? 0 : 335))
-                    .accessibilityHidden(true)
-                    .animation(Animation.easeInOut(duration: 2).delay(0.5),value: self.showShadow)
-                    .onReceive(self.stopWatch.$state) { state in
-                        withAnimation(state ? .easeInOut(duration: 2).delay(0.5): nil)
-                        {
-                            showShadow = state
                         }
-                    }
-                    .rotationEffect(.degrees(90))
-                    
-                    
-                    
-                    ZStack{
-                        Image("flower")
-                            .rotationEffect(.degrees(0), anchor: .bottom)
+                        .rotationEffect(.degrees(-90))
                         
-                        Image("flower")  // Middle left
-                        Image("flower")  // Left
-                            .rotationEffect(.degrees( mlBreath2 ? -5 : -25), anchor: .bottom)
-                            .onReceive(self.stopWatch.$state) { state in
-                                withAnimation(state ? .easeInOut(duration: 2).delay(2).repeatForever() : nil)
-                                {
-                                    mlBreath2 = state
+                     
+                        ZStack{
+                            Image("flower")
+                                .rotationEffect(.degrees(0), anchor: .bottom)
+                            
+                            Image("flower")  // Middle left
+                            Image("flower")  // Left
+                                .rotationEffect(.degrees( mlBreath2 ? -5 : -25), anchor: .bottom)
+                                .onReceive(self.stopWatch.$state) { state in
+                                    withAnimation(state ? .easeInOut(duration: 2).delay(2).repeatForever() : nil)
+                                    {
+                                        mlBreath2 = state
+                                    }
+                                    
+                                    
                                 }
-                                
-                                
-                            }
-                        
-                        Image("flower")  // Middle right
-                        Image("flower")  // Right
-                            .rotationEffect(.degrees( mrBreath2 ? 5 : 25), anchor: .bottom)
-                            .onReceive(self.stopWatch.$state) { state in
-                                withAnimation(state ? .easeInOut(duration: 2).delay(2).repeatForever() : nil)
-                                {
-                                    mrBreath2 = state
+                            
+                            Image("flower")  // Middle right
+                            Image("flower")  // Right
+                                .rotationEffect(.degrees( mrBreath2 ? 5 : 25), anchor: .bottom)
+                                .onReceive(self.stopWatch.$state) { state in
+                                    withAnimation(state ? .easeInOut(duration: 2).delay(2).repeatForever() : nil)
+                                    {
+                                        mrBreath2 = state
+                                    }
                                 }
-                            }
-                        Image("flower") // Left
-                            .rotationEffect(.degrees( lBreath2 ? -10 : -50), anchor: .bottom)
-                        //     .animation(Animation.easeInOut(duration: 2).delay(2).repeatForever(autoreverses: true))
-                            .onReceive(self.stopWatch.$state) { state in
-                                withAnimation(state ? .easeInOut(duration: 2).delay(2).repeatForever() : nil)
-                                {
-                                    lBreath2 = state
+                            Image("flower") // Left
+                                .rotationEffect(.degrees( lBreath2 ? -10 : -50), anchor: .bottom)
+                            //     .animation(Animation.easeInOut(duration: 2).delay(2).repeatForever(autoreverses: true))
+                                .onReceive(self.stopWatch.$state) { state in
+                                    withAnimation(state ? .easeInOut(duration: 2).delay(2).repeatForever() : nil)
+                                    {
+                                        lBreath2 = state
+                                    }
+                                    
                                 }
-                                
-                            }
-                        
-                        
-                        Image("flower") // Right
-                            .rotationEffect(.degrees( rBreath2 ? 10 : 50), anchor: .bottom)
-                        //  .animation(Animation.easeInOut(duration: 2).delay(2).repeatForever(autoreverses: true))
-                            .onReceive(self.stopWatch.$state) { state in
-                                withAnimation(state ? .easeInOut(duration: 2).delay(2).repeatForever() : nil){
-                                    rBreath2 = state
+                            
+                            
+                            Image("flower") // Right
+                                .rotationEffect(.degrees( rBreath2 ? 10 : 50), anchor: .bottom)
+                            //  .animation(Animation.easeInOut(duration: 2).delay(2).repeatForever(autoreverses: true))
+                                .onReceive(self.stopWatch.$state) { state in
+                                    withAnimation(state ? .easeInOut(duration: 2).delay(2).repeatForever() : nil){
+                                        rBreath2 = state
+                                    }
                                 }
+                            
+                            
+                        }//.position(x:215,y:340)
+                        
+                    //    .position(x: screenWidth/1.999,y: screenHeight/2.89)
+                        .accessibilityHidden(true)
+                        .shadow(radius: showShadow ? 20 : 0)
+                        .hueRotation(Angle(degrees: showShadow ? 0 : 335))
+                        .animation(Animation.easeInOut(duration: 2).delay(0.5),value: self.showShadow)
+                        .onReceive(self.stopWatch.$state) { state in
+                            withAnimation(state ? .easeInOut(duration: 2).delay(0.5): nil)
+                            {
+                                showShadow = state
                             }
-                        
-                        
-                    }//.position(x:215,y:340)
-                    .position(x: screenWidth/1.999,y: screenHeight/2.89)
-                    .accessibilityHidden(true)
-                    .shadow(radius: showShadow ? 20 : 0)
-                    .hueRotation(Angle(degrees: showShadow ? 0 : 335))
-                    .animation(Animation.easeInOut(duration: 2).delay(0.5),value: self.showShadow)
-                    .onReceive(self.stopWatch.$state) { state in
-                        withAnimation(state ? .easeInOut(duration: 2).delay(0.5): nil)
-                        {
-                            showShadow = state
+                            
+                            
                         }
+                        .rotationEffect(.degrees(90))
                         
-                        
-                    }
+                    }.padding()
+                    }.offset(y: -50)
                     
-                    
-                    .rotationEffect(.degrees(-90))
-                    
-                }.offset(y: -50)
                 
                 VStack{
                     
@@ -218,10 +218,12 @@ struct ContentView: View {
                                 }
                             }
                         Text("\(time)")
-                            .font(.system(size: 60))
+                            .font(.system(size: 80)).minimumScaleFactor(0.6)
                             .foregroundColor(Color("whitecolor"))
                             .padding()
-                        
+                            .frame(width: 170, height: 60, alignment: .center)
+                            .lineLimit(1)
+                              .layoutPriority(1)
                         
                         Text("+")
                             .font(Font.custom("HSN Sara", size: 70))
@@ -240,43 +242,45 @@ struct ContentView: View {
                                 
                             }
                     }
+                    .padding(.horizontal)
                     .offset(y: 300)
                     
-                    Button("\(buttonState)") {
-                        if buttonState == "Stop"{
-                            time = "\(self.stopWatch.counter)"
-                            //   self.stopWatch.counter
-                            self.stopWatch.stop()
-                            self.buttonState = "Start"
-                        }else{
-                            self.stopWatch.start()
-                            self.buttonState = "Stop"
-                        }
-                        
-                    }.accessibilityLabel("\(buttonState)")
-                        .font(Font.custom("HSN Sara", size: 24)).foregroundColor(Color("redColor")).background(
-                            Rectangle()
-                                .frame(width: 214, height: 50, alignment: .center)
-                                .foregroundColor(Color("whitecolor"))
-                                .cornerRadius(8)
+                    Button(buttonState) {
+                                if buttonState == "\(NSLocalizedString("STOP", comment: ""))"{
+                                    time = "\(self.stopWatch.counter)"
+                                    //   self.stopWatch.counter
+                                    self.stopWatch.stop()
+                                    self.buttonState = "\(NSLocalizedString("START", comment: ""))"
+                                }else{
+                                    self.stopWatch.start()
+                                    self.buttonState = "\(NSLocalizedString("STOP", comment: ""))"
+                                }
+                                
+                            }.accessibilityLabel(buttonState)
+                        .padding()
+                                .font(Font.custom("HSN Sara", size: 24)).foregroundColor(Color("redColor")).background(
+                                    Rectangle()
+                                        .frame(width: 214, height: 50, alignment: .center)
+                                        .foregroundColor(Color("whitecolor"))
+                                        .cornerRadius(8)
+                                    
+                                ).offset(y: 320).padding(.bottom, 100.0)
+                                .onReceive(self.stopWatch.$counter) { count in
+                                    if count == 0 {
+                                        self.buttonState = "\(NSLocalizedString("START", comment: ""))"
+                                    }
+                                }
                             
-                        ).offset(y: 320).padding(.bottom, 100.0)
-                        .onReceive(self.stopWatch.$counter) { count in
-                            if count == 0 {
-                                self.buttonState = "Start"
-                            }
-                        }
+                        }.padding()
+            }
                     
                 }
+                
             }
-            
         }
         
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+        struct ContentView_Previews: PreviewProvider {
+            static var previews: some View {
+                ContentView()
+            }
+        }

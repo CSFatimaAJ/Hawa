@@ -17,15 +17,17 @@ struct info: View {
     let reducestress: LocalizedStringKey = "Reduce stress"
     let painrelief: LocalizedStringKey = "Pain relief"
     let Reducingtheleveloftoxinsinthebody: LocalizedStringKey = "Reducing the level of toxins in the body"
-    let Improveimmunity: LocalizedStringKey = " Improve immunity"
+    let EnhanceImmunity: LocalizedStringKey = " Enhance Immunity"
     let Loweringbloodpressure: LocalizedStringKey = "Lowering blood pressure"
     let Increasingtheenergylevel: LocalizedStringKey = "Increasing the energy level"
+    let breathBenefit: LocalizedStringKey = "Breath Benefit";
+
     
     var btnBack : some View { Button(action: {
         self.presentationMode.wrappedValue.dismiss()
         }) {
             HStack {
-            Image("back") // set image here
+                Image(systemName: "arrow.backward.circle.fill").resizable().foregroundColor(Color.white).frame(width: 40, height: 40) // set image here
                 .aspectRatio(contentMode: .fit)
               
             }
@@ -55,28 +57,25 @@ struct info: View {
                     .ignoresSafeArea()
                 
                 
-                VStack(alignment:.trailing){
-                    Text("ما هي فوائد التنفس العميق؟")
-                        .font(Font.custom("HSN Sara", size: 30))
-                        .foregroundColor(.white)
-                    
-                    
-                    Text("التقليل من التوتر ")
-                        .foregroundColor(.white)
-                    Text(" التخفيف من الألم")
-                        .foregroundColor(.white)
-                    Text(" التقليل من مستوى السموم في الجسم")
-                        .foregroundColor(.white)
-                    Text(" تحسين المناعة ")
-                        .foregroundColor(.white)
-                    Text(" زيادة مستوى الطاقة")
-                        .foregroundColor(.white)
-                    Text("خفض ضغط الدم")
-                        .foregroundColor(.white)
-                    Text(" فوائد التنفس العميق الأخرى")
-                        .foregroundColor(.white)
-                    
-                }
+                VStack(alignment:.leading){
+
+                            Text("What are the benefits of deep breathing?")
+                                .font(.title)
+                                .foregroundColor(.white)
+                                .padding(.bottom,20)
+                            Text("Reduce stress")
+                                .foregroundColor(.white)
+                            Text("Pain relief")
+                                .foregroundColor(.white)
+                            Text("Reducing the level of toxins in the body")
+                                .foregroundColor(.white)
+                            Text(" Enhance Immunity")
+                                .foregroundColor(.white)
+                            Text("Increasing the energy level")
+                                .foregroundColor(.white)
+                            Text("Lowering blood pressur")
+                                .foregroundColor(.white)
+                        }
             }
         }.foregroundColor(.white)                        .font(Font.custom("HSN Sara", size: 20))
         .navigationTitle("Breath Benefit")
