@@ -4,6 +4,9 @@
 
 ## An app that helps People who wants to be reminded to take a deep breath during their daily lives.
 
+## TestFlight
+https://testflight.apple.com/join/Wxy5RAXE
+
 ## Challenge Statement
 ###### People want to have healthy body and improve their healthy life
 
